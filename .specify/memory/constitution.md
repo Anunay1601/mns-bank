@@ -1,50 +1,45 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+Version change: 0.0.0 → 1.0.0 (Initial constitution creation)
+Modified principles: None (initial creation)
+Added sections: Core Principles, Security Requirements, Development Workflow, Governance
+Templates requiring updates: 
+✅ plan-template.md (verified alignment)
+✅ spec-template.md (verified alignment) 
+✅ tasks-template.md (verified alignment)
+✅ commands/*.md (verified alignment)
+Follow-up TODOs: None
+-->
+
+# MNS Bank Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Component-First Architecture
+Every UI feature must be implemented as a reusable React component. Components must be self-contained, independently testable, and properly documented. Clear business purpose required - no organizational-only components. Each component should follow single responsibility principle with well-defined props interface.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Mobile-First Responsive Design
+All UI components must be designed mobile-first with progressive enhancement. Breakpoints: Mobile (320px-767px), Tablet (768px-1199px), Desktop (1200px+). Responsive behavior must be tested at each breakpoint. No desktop-only features allowed without mobile equivalent.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Type Safety (NON-NEGOTIABLE)
+TypeScript mandatory for all code. Strict TypeScript configuration required. No `any` types allowed except specific documented exceptions. All interfaces must be explicitly typed. Props, state, and function parameters must have proper type definitions.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Accessibility Standards
+WCAG 2.1 AA compliance mandatory for all UI components. Semantic HTML required with proper ARIA labels. Keyboard navigation must work for all interactive elements. Screen reader compatibility must be verified. Color contrast ratios must meet 4.5:1 minimum standard.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Banking UX Standards
+Professional banking aesthetics must be maintained across all components. Blue color scheme with consistent branding. Trust indicators (security badges, SSL indicators) must be visible. Form validation must provide clear, user-friendly error messages. Loading states required for all async operations.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Security Requirements
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+All user input must be sanitized and validated on both client and server side. XSS prevention mandatory with proper content security policies. Form submissions must include CSRF protection. Sensitive data must never be logged or exposed in error messages. All authentication flows must use secure HTTPS protocols.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+## Development Workflow
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+Code review mandatory for all changes. Components must pass visual regression testing. Build must pass without errors or warnings. All new features must include documentation updates. Performance testing required for components affecting page load time. Security review mandatory for any changes handling user data.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution supersedes all other development practices. Amendments require documentation, team approval, and migration plan. All pull requests must verify constitutional compliance. Code complexity must be justified with clear business value. Use README.md and component comments for runtime development guidance.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-03-27 | **Last Amended**: 2025-03-27
