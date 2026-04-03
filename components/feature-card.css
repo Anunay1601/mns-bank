@@ -1,0 +1,327 @@
+/* Reusable Feature Card Component */
+
+/* Feature card */
+.feature-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  padding: 36px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card hover effects */
+.feature-card:hover {
+  transform: translateY(-8px) scale(1.03) !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  border-color: rgba(59, 130, 246, 0.4);
+}
+
+/* More specific hover selector */
+article.feature-card:hover {
+  transform: translateY(-8px) scale(1.03) !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  border-color: rgba(59, 130, 246, 0.4);
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  transform: scaleX(0);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Glow effect on hover */
+.feature-card::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.3), rgba(139, 92, 246, 0.2), rgba(59, 130, 246, 0.1));
+  border-radius: 18px;
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+  filter: blur(8px);
+}
+
+.feature-card:hover::after {
+  opacity: 1;
+}
+
+/* Feature icon */
+.feature-card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Ensure icons are consistently sized */
+.feature-card-icon svg {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.feature-card-icon::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent);
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card:hover .feature-card-icon {
+  transform: scale(1.1) rotate(2deg);
+}
+
+.feature-card:hover .feature-card-icon::before {
+  opacity: 1;
+}
+
+/* Icon colors for different products */
+.feature-card-icon.home {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+}
+
+.feature-card-icon.personal {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+}
+
+.feature-card-icon.savings {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  color: white;
+}
+
+.feature-card-icon.education {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+}
+
+.feature-card-icon.credit {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+}
+
+.feature-card-icon.fixed {
+  background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+  color: white;
+}
+
+/* Feature content */
+.feature-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-card-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #020617;
+  margin-bottom: 20px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.feature-card-description {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: #475569;
+  margin-bottom: 28px;
+  font-weight: 400;
+}
+
+/* Feature list */
+.feature-card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px 0;
+  flex-grow: 1;
+}
+
+.feature-card-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 0.875rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.feature-card-bullet {
+  width: 5px;
+  height: 5px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border-radius: 50%;
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+/* Feature CTA button */
+.feature-card-cta {
+  width: 100%;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+  overflow: hidden;
+  margin-top: auto;
+}
+
+.feature-card-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card-cta:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+}
+
+.feature-card-cta:hover::before {
+  left: 100%;
+}
+
+/* Subtle background animation on hover */
+.feature-card {
+  background: rgba(255, 255, 255, 0.95);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card:hover {
+  background: rgba(255, 255, 255, 0.98);
+}
+
+/* Badge for special offers */
+.feature-card-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 16px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+  z-index: 10;
+}
+
+/* Animations handled by Framer Motion */
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .feature-card {
+    padding: 20px;
+  }
+  
+  .feature-card-title {
+    font-size: 1.125rem;
+  }
+  
+  .feature-card-description {
+    font-size: 0.9rem;
+  }
+  
+  .feature-card-icon {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .feature-card-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-card {
+    padding: 18px;
+  }
+  
+  .feature-card-title {
+    font-size: 1rem;
+  }
+  
+  .feature-card-description {
+    font-size: 0.85rem;
+    margin-bottom: 16px;
+  }
+  
+  .feature-card-cta {
+    padding: 12px 16px;
+    font-size: 0.85rem;
+  }
+  
+  .feature-card-icon {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .feature-card-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Micro-interactions */
+.feature-card:active {
+  transform: translateY(-4px) scale(1.01);
+}
+
+/* Focus states for accessibility */
+.feature-card-cta:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.feature-card:focus-within {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
