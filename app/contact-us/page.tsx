@@ -178,10 +178,10 @@ export default function ContactUsPage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
           {/* Contact Form */}
           <div className="lg:col-span-2">
-            <Card className="dark:bg-gray-800 dark:border-gray-700">
+            <Card className="bg-white border-gray-200">
               <CardHeader>
-                <CardTitle className="text-blue-900 dark:text-blue-100">Send us a Message</CardTitle>
-                <CardDescription className="text-gray-600 dark:text-gray-400">
+                <CardTitle className="text-blue-900">Send us a Message</CardTitle>
+                <CardDescription className="text-gray-600">
                   Fill in the form below and we'll get back to you soon
                 </CardDescription>
               </CardHeader>
