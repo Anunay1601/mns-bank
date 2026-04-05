@@ -1,15 +1,18 @@
 'use client'
 
-import { useState } from 'react'
+import { useActionState, useEffect, useState } from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { Badge } from '@/components/ui/badge'
 import { Phone, Mail, MapPin, Clock, MessageSquare, CheckCircle, Send } from 'lucide-react'
+import { submitContactForm, type ContactFormState } from './actions'
+
+const initialState: ContactFormState = {}
 
 export default function ContactUsPage() {
+  const [actionState, formAction, isPending] = useActionState(submitContactForm, initialState)
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -18,7 +21,6 @@ export default function ContactUsPage() {
     message: '',
     inquiryType: ''
   })
-  const [isSubmitting, setIsSubmitting] = useState(false)
   const [showSuccess, setShowSuccess] = useState(false)
   const [referenceNumber, setReferenceNumber] = useState('')
 
@@ -26,16 +28,10 @@ export default function ContactUsPage() {
     setFormData(prev => ({ ...prev, [field]: value }))
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
-    // Simulate API call
-    setTimeout(() => {
-      const refNo = 'MNS' + Date.now().toString().slice(-8)
-      setReferenceNumber(refNo)
+  useEffect(() => {
+    if (actionState.success) {
+      setReferenceNumber(actionState.referenceNumber || '')
       setShowSuccess(true)
-      setIsSubmitting(false)
       setFormData({
         name: '',
         phone: '',
@@ -44,8 +40,8 @@ export default function ContactUsPage() {
         message: '',
         inquiryType: ''
       })
-    }, 1500)
-  }
+    }
+  }, [actionState.success, actionState.referenceNumber])
 
   const contactMethods = [
     {
@@ -174,22 +170,33 @@ export default function ContactUsPage() {
                     </Button>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-4">
+                  <form action={formAction} className="space-y-4">
+                    {actionState.error && (
+                      <div className="rounded-md border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700">
+                        {actionState.error}
+                      </div>
+                    )}
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <Label htmlFor="name">Full Name *</Label>
                         <Input
                           id="name"
+                          name="name"
                           value={formData.name}
                           onChange={(e) => handleInputChange('name', e.target.value)}
                           required
                           placeholder="Enter your full name"
                         />
+                        {actionState.fieldErrors?.name?.[0] && (
+                          <p className="mt-1 text-xs text-red-600">{actionState.fieldErrors.name[0]}</p>
+                        )}
                       </div>
                       <div>
                         <Label htmlFor="phone">Phone Number *</Label>
                         <Input
                           id="phone"
+                          name="phone"
                           type="tel"
                           value={formData.phone}
                           onChange={(e) => handleInputChange('phone', e.target.value)}
@@ -197,6 +204,9 @@ export default function ContactUsPage() {
                           placeholder="10-digit mobile number"
                           pattern="[0-9]{10}"
                         />
+                        {actionState.fieldErrors?.phone?.[0] && (
+                          <p className="mt-1 text-xs text-red-600">{actionState.fieldErrors.phone[0]}</p>
+                        )}
                       </div>
                     </div>
                     
@@ -204,12 +214,16 @@ export default function ContactUsPage() {
                       <Label htmlFor="email">Email Address *</Label>
                       <Input
                         id="email"
+                        name="email"
                         type="email"
                         value={formData.email}
                         onChange={(e) => handleInputChange('email', e.target.value)}
                         required
                         placeholder="your.email@example.com"
                       />
+                      {actionState.fieldErrors?.email?.[0] && (
+                        <p className="mt-1 text-xs text-red-600">{actionState.fieldErrors.email[0]}</p>
+                      )}
                     </div>
                     
                     <div>
@@ -227,33 +241,42 @@ export default function ContactUsPage() {
                           <SelectItem value="other">Other</SelectItem>
                         </SelectContent>
                       </Select>
+                      <input type="hidden" name="inquiryType" value={formData.inquiryType} />
                     </div>
                     
                     <div>
                       <Label htmlFor="subject">Subject *</Label>
                       <Input
                         id="subject"
+                        name="subject"
                         value={formData.subject}
                         onChange={(e) => handleInputChange('subject', e.target.value)}
                         required
                         placeholder="Brief subject of your message"
                       />
+                      {actionState.fieldErrors?.subject?.[0] && (
+                        <p className="mt-1 text-xs text-red-600">{actionState.fieldErrors.subject[0]}</p>
+                      )}
                     </div>
                     
                     <div>
                       <Label htmlFor="message">Message *</Label>
                       <textarea
                         id="message"
+                        name="message"
                         className="w-full min-h-[120px] p-3 border border-gray-300 rounded-md resize-none"
                         value={formData.message}
                         onChange={(e) => handleInputChange('message', e.target.value)}
                         required
                         placeholder="Describe your inquiry in detail..."
                       />
+                      {actionState.fieldErrors?.message?.[0] && (
+                        <p className="mt-1 text-xs text-red-600">{actionState.fieldErrors.message[0]}</p>
+                      )}
                     </div>
                     
-                    <Button type="submit" disabled={isSubmitting} className="w-full">
-                      {isSubmitting ? (
+                    <Button type="submit" disabled={isPending} className="w-full">
+                      {isPending ? (
                         <>
                           <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
                           Sending...

@@ -23,13 +23,13 @@ export default function Logo({
       tagline: 'text-xs'
     },
     medium: {
-      container: 'w-12 h-12',
-      text: 'text-lg',
+      container: 'w-10 h-10',
+      text: 'text-base',
       title: 'text-xl',
       tagline: 'text-xs'
     },
     large: {
-      container: 'w-16 h-16',
+      container: 'w-14 h-14',
       text: 'text-xl',
       title: 'text-2xl',
       tagline: 'text-sm'
@@ -40,8 +40,8 @@ export default function Logo({
   
   const colorClasses = {
     blue: {
-      title: 'text-blue-900',
-      tagline: 'text-gray-600'
+      title: 'text-[var(--brand-navy)]',
+      tagline: 'text-[var(--muted-foreground)]'
     },
     white: {
       title: 'text-white',
@@ -52,13 +52,13 @@ export default function Logo({
   const currentColors = colorClasses[textColor]
 
   return (
-    <Link href="/" className={`flex items-center space-x-3 ${className}`}>
-      <div className={`${currentSize.container} bg-gradient-to-br from-blue-900 to-blue-700 rounded-xl flex items-center justify-center shadow-lg border border-blue-800/20`}>
-        <span className={`text-white font-bold ${currentSize.text}`}>MNS</span>
+    <Link href="/" className={`flex items-center gap-2.5 group ${className}`}>
+      <div className={`${currentSize.container} bg-[var(--brand-navy)] rounded-xl flex items-center justify-center shadow-[var(--shadow-sm)] transition-shadow duration-[var(--duration-normal)] group-hover:shadow-[var(--shadow-md)]`}>
+        <span className={`text-white font-bold tracking-tight ${currentSize.text}`}>MNS</span>
       </div>
       {showText && (
-        <div>
-          <span className={`font-bold ${currentSize.title} ${currentColors.title} leading-tight`}>
+        <div className="flex flex-col">
+          <span className={`font-bold ${currentSize.title} ${currentColors.title} leading-tight tracking-tight`}>
             MNS Bank
           </span>
           {showTagline && (
