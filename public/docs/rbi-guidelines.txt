@@ -1,0 +1,114 @@
+# RBI Guidelines - MNS Bank
+
+## Table of Contents
+
+1. Know Your Customer (KYC) Guidelines
+2. Anti-Money Laundering (AML) Standards  
+3. Digital Banking Guidelines
+4. Interest Rate Guidelines
+5. Customer Service Standards
+6. Data Protection Guidelines
+
+## 1. Know Your Customer (KYC) Guidelines
+
+### Objective
+To prevent banks from being used, intentionally or unintentionally, by criminal elements for money laundering activities.
+
+### Key Requirements
+- Customer identification procedure
+- Monitoring of transactions
+- Risk management
+- Customer acceptance policy
+
+### Implementation
+MNS Bank implements robust KYC procedures including:
+- Document verification
+- Biometric authentication
+- Regular customer due diligence
+- Transaction monitoring
+
+## 2. Anti-Money Laundering (AML) Standards
+
+### Framework
+Comprehensive AML framework to detect and prevent money laundering activities.
+
+### Components
+- Customer due diligence
+- Transaction monitoring
+- Suspicious transaction reporting
+- Record keeping
+
+### Compliance
+- Regular AML audits
+- Staff training programs
+- Regulatory reporting
+- Risk assessment
+
+## 3. Digital Banking Guidelines
+
+### Security Standards
+- End-to-end encryption
+- Multi-factor authentication
+- Secure login protocols
+- Transaction security
+
+### Customer Protection
+- Fraud prevention measures
+- Secure data transmission
+- Privacy protection
+- Dispute resolution
+
+## 4. Interest Rate Guidelines
+
+### Fair Practices
+- Transparent interest rates
+- Clear communication of charges
+- No hidden fees
+- Competitive pricing
+
+### Disclosure Requirements
+- Annual percentage rate (APR)
+- Processing fees
+- Prepayment charges
+- Late payment penalties
+
+## 5. Customer Service Standards
+
+### Service Quality
+- 24/7 customer support
+- Multi-channel service
+- Prompt complaint resolution
+- Service level agreements
+
+### Grievance Redressal
+- Dedicated complaint cells
+- Escalation procedures
+- Timely response
+- Fair resolution
+
+## 6. Data Protection Guidelines
+
+### Privacy Protection
+- Data encryption
+- Secure storage
+- Limited access
+- Regular audits
+
+### Customer Rights
+- Right to information
+- Right to correction
+- Right to deletion
+- Right to portability
+
+## Compliance Certification
+
+This document certifies that MNS Bank complies with all RBI guidelines as of March 2024.
+
+For any queries regarding these guidelines, please contact:
+- Compliance Officer: compliance@mnssbank.com
+- Phone: 1800-123-4568
+
+---
+*Document Version: 1.0*
+*Last Updated: March 15, 2024*
+*Next Review: March 15, 2025*

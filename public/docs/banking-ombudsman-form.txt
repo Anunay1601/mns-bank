@@ -1,0 +1,184 @@
+# Banking Ombudsman Scheme - Complaint Form
+
+## Banking Ombudsman Scheme, 2021
+### Reserve Bank of India
+
+---
+
+## Complaint Details
+
+### Applicant Information
+**Name:** _________________________  
+**Address:** _________________________  
+**City:** _________________________  
+**State:** _________________________  
+**Pin Code:** _________________________  
+**Phone:** _________________________  
+**Email:** _________________________  
+
+### Bank Details
+**Bank Name:** MNS Bank  
+**Branch:** _________________________  
+**Account Number:** _________________________  
+**Account Type:** _________________________  
+
+### Complaint Information
+**Date of Complaint:** _________________________  
+**Complaint Category:** _________________________  
+**Amount Involved (if any):** _________________________  
+
+---
+
+## Types of Complaints Covered
+
+### 1. Deficiency in Banking Service
+- Delay in collection of cheques, drafts, bills
+- Non-acceptance of cheques without sufficient reason
+- Non-credit of proceeds to customers' accounts
+- Failure to honour commitments
+
+### 2. Credit Card Issues
+- Billing disputes
+- Unauthorized charges
+- Delay in issuing credit cards
+- Failure to provide statements
+
+### 3. Loan Related Issues
+- Delay in sanction/disbursement of loans
+- Non-adherence to fair practices code
+- Excessive interest charges
+- Forced insurance premiums
+
+### 4. Deposit Account Issues
+- Delay in opening/closing accounts
+- Unauthorized deductions
+- Interest calculation errors
+- Statement of account issues
+
+### 5. Remittance Issues
+- Delay in remittance facilities
+- Non-adherence to exchange rates
+- Failure to provide remittance advice
+- Charges not disclosed
+
+### 6. Mobile Banking Issues
+- Failed transactions
+- Unauthorized access
+- Service disruptions
+- Technical issues
+
+---
+
+## Complaint Process
+
+### Step 1: File Complaint with Bank
+- Contact MNS Bank customer service
+- File written complaint
+- Wait for bank response (30 days)
+- Keep complaint reference number
+
+### Step 2: Approach Banking Ombudsman
+- If unsatisfied with bank response
+- File complaint within 1 year
+- Use prescribed form
+- Attach supporting documents
+
+### Step 3: Ombudsman Review
+- Ombudsman reviews complaint
+- May call for additional information
+- Provides recommendation
+- Bank implements recommendation
+
+---
+
+## Supporting Documents Required
+
+### Mandatory Documents
+1. Complaint form (duly filled)
+2. Bank's reply (if any)
+3. Proof of transaction (if applicable)
+4. Identity proof of complainant
+
+### Additional Documents (if applicable)
+- Account statements
+- Loan documents
+- Credit card statements
+- Correspondence with bank
+- Receipts and vouchers
+- Any other relevant documents
+
+---
+
+## Contact Information
+
+### Banking Ombudsman Offices
+
+#### Mumbai
+- Address: Reserve Bank of India Building, Shahid Bhagat Singh Road, Mumbai
+- Phone: 022-2444-5000
+- Email: bombay.rbo@rbi.org.in
+
+#### Delhi
+- Address: 6th Floor, Reserve Bank of India Building, Parliament Street, New Delhi
+- Phone: 011-2339-8444
+- Email: delhi.rbo@rbi.org.in
+
+#### Kolkata
+- Address: 15th Floor, RBI Building, Netaji Subhas Road, Kolkata
+- Phone: 033-2241-5444
+- Email: kolkata.rbo@rbi.org.in
+
+#### Chennai
+- Address: RBI Building, 16, Rajaji Salai, Chennai
+- Phone: 044-2530-4444
+- Email: chennai.rbo@rbi.org.in
+
+### Toll-Free Number
+- 14440 (Available on all working days)
+
+---
+
+## Important Instructions
+
+### Before Filing Complaint
+1. Approach the bank first with your complaint
+2. Wait for bank's response (maximum 30 days)
+3. Keep all documents and correspondence
+4. File complaint within 1 year of bank's response
+
+### Filing Procedure
+1. Fill complaint form completely
+2. Attach all supporting documents
+3. Submit to appropriate ombudsman office
+4. Keep copy of complaint and documents
+
+### Timeline
+- Acknowledgement: Within 7 days
+- Resolution: Within 30-60 days
+- Extension: Maximum 90 days in complex cases
+
+---
+
+## Declaration
+
+I hereby declare that the information provided above is true and correct to the best of my knowledge. I understand that providing false information may lead to rejection of my complaint.
+
+**Signature:** _________________________  
+**Date:** _________________________  
+**Place:** _________________________
+
+---
+
+## For Office Use Only
+
+**Complaint Number:** _________________________  
+**Date of Receipt:** _________________________  
+**Status:** _________________________  
+**Remarks:** _________________________  
+
+**Officer Signature:** _________________________  
+**Date:** _________________________
+
+---
+*Form Version: 2021.2*  
+*Last Updated: January 1, 2024*
